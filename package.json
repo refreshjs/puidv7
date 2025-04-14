@@ -1,6 +1,6 @@
 {
   "name": "@refreshjs/puidv7",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Prefixed UUIDv7's in crockford base32 encoding",
   "homepage": "https://github.com/refreshjs/puidv7",
   "repository": {
@@ -23,15 +23,14 @@
   "type": "module",
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "bun test && bun run build && bun run types",
     "format": "prettier -w .",
     "ci-format": "prettier -c .",
     "lint": "oxlint",
     "test": "vitest",
     "ci-test": "vitest --run",
-    "build": "bun build --outfile dist/index.js --target=browser src/",
     "types": "bun run tsc --emitDeclarationOnly",
-    "pre-publish": "bun test && bun run build && bun run types",
+    "build": "bun build --outfile dist/index.js --target=browser src/",
     "clean": "rm -rf dist/"
   },
   "dependencies": {
