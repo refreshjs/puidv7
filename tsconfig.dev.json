@@ -1,0 +1,41 @@
+{
+  "include": ["src/*.ts"],
+  "compilerOptions": {
+    // definitely set:
+    // "baseUrl": ".",
+    // "rootDirs": ["."],
+    // "paths": {},
+    // "types": [],
+    // maybe set:
+    "lib": ["ESNext"],
+    // most common alternative:
+    // "lib": ["DOM", "DOM.Iterable", "ESNext"]
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    // avoid setting:
+    "allowJs": true, // base option
+    "esModuleInterop": true, // base option
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true, // base option
+    "moduleDetection": "force", // base option
+    "moduleResolution": "bundler",
+    "noEmit": true, // using vite, not tsc
+    "noFallthroughCasesInSwitch": true, // stricter
+    "noImplicitAny": true, // stricter
+    "noImplicitOverride": true, // strictness
+    "noImplicitReturns": true, // stricter
+    "noImplicitThis": true, // stricter
+    "noPropertyAccessFromIndexSignature": true, // stricter
+    "noUncheckedIndexedAccess": true, // strictness
+    "noUnusedLocals": true, // stricter
+    "noUnusedParameters": true, // stricter
+    "resolveJsonModule": true, // base option
+    "strict": true, // strictness
+    "strictBindCallApply": true, // stricter
+    "strictFunctionTypes": true, // stricter
+    "strictNullChecks": true, // stricter
+    "skipLibCheck": true, // base option
+    "verbatimModuleSyntax": true // base option
+  }
+}

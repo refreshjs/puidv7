@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.dev.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDirs": ["."],
+    "types": [],
+    "paths": {},
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "noEmit": false,
+    "declaration": true
+  }
+}

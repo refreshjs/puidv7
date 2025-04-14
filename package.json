@@ -1,0 +1,55 @@
+{
+  "name": "@refreshjs/puidv7",
+  "version": "1.0.0",
+  "description": "Prefixed UUIDv7's in crockford base32 encoding",
+  "homepage": "https://github.com/refreshjs/puidv7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refreshjs/puidv7.git"
+  },
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Nadraman",
+      "url": "https://nadrama.com"
+    }
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier -w .",
+    "ci-format": "prettier -c .",
+    "lint": "oxlint",
+    "test": "vitest",
+    "ci-test": "vitest --run",
+    "build": "bun build --outfile dist/index.js --target=browser src/",
+    "types": "bun run tsc --emitDeclarationOnly",
+    "pre-publish": "bun test && bun run build && bun run types",
+    "clean": "rm -rf dist/"
+  },
+  "dependencies": {
+    "@scure/base": "^1.2.4",
+    "uuidv7": "^1.0.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "vitest": "^3.1.1"
+  },
+  "peerDependencies": {
+    "typescript": "5.3.2",
+    "oxlint": "^0.16.6",
+    "prettier": "^3.3.3",
+    "drizzle-orm": "^0.36.1"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  }
+}
