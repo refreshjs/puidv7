@@ -14,6 +14,31 @@ It's a prefixed UUIDv7 which:
 3. Does not contain any hyphens
 4. Is prefixed with a 3 character alphabetic (a-z) prefix
 
+## UUIDv7 <> puidv7 conversion example
+
+With `acc` prefix...
+
+- UUIDv7 = `01970a1c-e31e-7422-9cd5-e9651d11cc97`
+
+- puidv7 = `acc06bgm7733st2576nx5jht4ecjw`
+
+How to manually verify:
+
+- Remove dashes from the UUIDv7 to get the HEX-encoded string
+
+  e.g. `01970a1c-e31e-7422-9cd5-e9651d11cc97` becomes `01970a1ce31e74229cd5e9651d11cc97`
+
+- Convert the HEX-encoded string to crockford base32
+  e.g. Use <https://cryptii.com/pipes/crockford-base32> with Bytes (in Hexadecimal format), and Encode to Base32 (Crockford's Base32 variant).
+
+  i.e. `01970a1ce31e74229cd5e9651d11cc97` becomes `06BGM7733ST2576NX5JHT4ECJW`
+
+- Convert the value to lowercase and add the prefix.
+
+  e.g. `06BGM7733ST2576NX5JHT4ECJW` becomes `06bgm7733st2576nx5jht4ecjw`
+
+  then `06bgm7733st2576nx5jht4ecjw` becomes `acc06bgm7733st2576nx5jht4ecjw`
+
 ## Why does the world need puidv7?
 
 Because:
