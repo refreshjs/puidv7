@@ -16,7 +16,9 @@ It's a prefixed UUIDv7 which:
 
 ## UUIDv7 <> puidv7 conversion example
 
-With `acc` prefix...
+Check out the online converter at <https://refreshjs.org/puidv7> or step through the following examples...
+
+With `acc` prefix:
 
 - UUIDv7 = `01970a1c-e31e-7422-9cd5-e9651d11cc97`
 
