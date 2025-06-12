@@ -1,6 +1,6 @@
 {
   "name": "@refreshjs/puidv7",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Prefixed UUIDv7's in crockford base32 encoding",
   "homepage": "https://github.com/refreshjs/puidv7",
   "repository": {
@@ -22,12 +22,12 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./*": {
-      "import": "./dist/*.js",
-      "types": "./dist/*.d.ts"
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
     }
   },
   "type": "module",
